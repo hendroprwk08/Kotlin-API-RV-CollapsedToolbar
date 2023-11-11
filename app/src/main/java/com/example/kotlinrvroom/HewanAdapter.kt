@@ -1,5 +1,7 @@
 package com.example.kotlinrvroom
 
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -25,13 +27,18 @@ class HewanAdapter (private var hewanList: List<Hewan>) :
 
         Glide.with(holder.itemView.context)
             .load(hewanList[position].getGambar())
+            .placeholder(R.drawable.image)
             .into(holder._binding.gambar)
 
         holder.itemView.setOnClickListener{
-//            val i = Intent(holder.itemView.context, DetailActivity::class.java)
-//            i.putExtra("i_idMeal", mealList[position].getId())
-//            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//            holder.itemView.context.startActivity(i)
+            val bundle = Bundle()
+            bundle.putString("_id", hewanList[position].getId())
+            bundle.putString("_nama", hewanList[position].getNama())
+
+            val i = Intent(holder.itemView.context, DetilActivity::class.java)
+            i.putExtras(bundle)
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            holder.itemView.context.startActivity(i)
         }
     }
 
