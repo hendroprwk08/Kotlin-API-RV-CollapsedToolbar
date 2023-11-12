@@ -4,14 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.GridLayoutManager
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.kotlinrvroom.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {

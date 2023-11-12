@@ -59,7 +59,7 @@ class DetilActivity : AppCompatActivity() {
 
                 Glide.with(applicationContext)
                     .load(jsonArray.get("foto").toString())
-                    .placeholder(R.drawable.image)
+                    .placeholder(R.drawable.baseline_broken_image_24)
                     .centerCrop()
                     .into(binding.image)
 

@@ -27,7 +27,7 @@ class HewanAdapter (private var hewanList: List<Hewan>) :
 
         Glide.with(holder.itemView.context)
             .load(hewanList[position].getGambar())
-            .placeholder(R.drawable.image)
+            .placeholder(R.drawable.baseline_broken_image_24)
             .into(holder._binding.gambar)
 
         holder.itemView.setOnClickListener{

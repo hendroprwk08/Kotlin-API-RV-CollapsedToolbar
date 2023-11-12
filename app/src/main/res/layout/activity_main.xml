@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         app:title="@string/app_name"
         app:titleTextColor="@color/white"
-        android:subtitle="API dari endemikdb.site"
+        app:subtitle="@string/sub_title"
+        app:subtitleTextColor="@color/white"
         android:background="@color/primary" />
 
     <ProgressBar
